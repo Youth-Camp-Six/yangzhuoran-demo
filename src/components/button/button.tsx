@@ -4,14 +4,14 @@ import classNames from 'classnames'
 
 export enum ButtonSize {
   Large = 'lg',
-  Small = 'sm',
+  Small = 'sm'
 }
 
 export enum ButtonType {
   Primary = 'primary',
   Default = 'default',
   Danger = 'danger',
-  Link = 'link',
+  Link = 'link'
 }
 
 interface BaseButtonProps {
@@ -23,28 +23,22 @@ interface BaseButtonProps {
   href?: string
 }
 
-type NativeButtonProps = BaseButtonProps & React.ButtonHTMLAttributes<HTMLElement>
-type AnchorButtonProps = BaseButtonProps & React.AnchorHTMLAttributes<HTMLElement>
+type NativeButtonProps = BaseButtonProps &
+  React.ButtonHTMLAttributes<HTMLElement>
+type AnchorButtonProps = BaseButtonProps &
+  React.AnchorHTMLAttributes<HTMLElement>
 
 export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
 
 const Button: React.FC<ButtonProps> = (props) => {
-  const {
-    className,
-    disabled,
-    size,
-    btnType,
-    children,
-    href,
-    ...restProps
-  } = props
+  const { className, disabled, size, btnType, children, href, ...restProps } =
+    props
 
-	const classes = classNames('btn', className, {
+  const classes = classNames('btn', className, {
     [`btn-${btnType}`]: btnType,
     [`btn-${size}`]: size,
-    'disabled': btnType === ButtonType.Link && disabled,
+    disabled: btnType === ButtonType.Link && disabled
   })
-
 
   if (btnType === ButtonType.Link) {
     return (
@@ -63,7 +57,7 @@ const Button: React.FC<ButtonProps> = (props) => {
 
 Button.defaultProps = {
   disabled: false,
-  btnType: ButtonType.Default,
+  btnType: ButtonType.Default
 }
 
 export default memo(Button)
