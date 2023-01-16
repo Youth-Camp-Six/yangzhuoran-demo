@@ -10,7 +10,7 @@
 
 - commitizen 确保提交代码时, commit message 规范
 
-- husky 拦截commit, 进行eslit检查, 并使用commitize模版进行提交, 
+- husky 拦截commit, 进行eslnit检查, 并使用commitize模版进行提交, 
 
 ## 文件目录
 
