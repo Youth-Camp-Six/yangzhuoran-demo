@@ -4,7 +4,9 @@ function App() {
   const name = '1'
 
   const obj = {
-    name: '1'
+    name: '1',
+    age: 'aaa',
+    num: '12'
   }
 
   return (
