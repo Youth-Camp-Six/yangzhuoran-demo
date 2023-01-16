@@ -1,20 +1,24 @@
 import React from 'react'
-import Button, { ButtonType } from './components/button/button'
+import Button, { ButtonSize, ButtonType } from './components/button/button'
 
 function App() {
   return (
     <div className="App">
       <h2>App</h2>
+      <Button btnType={ButtonType.Default}>Default</Button>
       <Button btnType={ButtonType.Default} disabled={true}>
-        aaa
+        Default disabled
       </Button>
-      <Button autoFocus btnType={ButtonType.Default} disabled={false}>
-        aaa
+      <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>
+        Primary Large
       </Button>
-      <Button btnType={ButtonType.Primary} disabled={false}>
-        aaa
+      <Button btnType={ButtonType.Primary} size={ButtonSize.Small}>
+        Primary Small
       </Button>
-      <Button btnType={ButtonType.Link}>aaa</Button>
+      <Button btnType={ButtonType.Primary}>Primary</Button>
+      <Button btnType={ButtonType.Link} href="https://www.baidu.com">
+        Link
+      </Button>
     </div>
   )
 }

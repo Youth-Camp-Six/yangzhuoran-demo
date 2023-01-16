@@ -12,6 +12,19 @@
 
 - husky 拦截commit, 进行eslnit检查, 并使用commitize模版进行提交, 
 
+## 样式文件存放逻辑
+```
+style文件夹
+  _variables.scss 全局样式变量
+  _mixin.scss     全局样式mixin混入
+  function.scss   全局function
+  index.scss      全局样式导出位置
+
+component文件夹
+  Button(组件)
+    style.scss    单独组件样式
+```
+
 ## 文件目录
 
 src

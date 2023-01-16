@@ -10,7 +10,10 @@
   $color,
   $hover-bg: lighten($bg, 7.5%),
   $hover-border: lighten($border, 10%),
-  $hover-color: $color
+  $hover-color: lighten($color, 7.5%),
+  $active-bg: darken($bg, 7.5%),
+  $active-border: darken($border, 10%),
+  $active-color: $color,
 ) {
   color: $color;
   background: $bg;
@@ -21,13 +24,19 @@
     border-color: $hover-border;
   }
   &:focus,
-  .focus {
+  &.focus {
     color: $hover-color;
     background: $hover-bg;
-    border-color: $hover-border;
+    border-color: $border;
+  }
+  &:active,
+  &.active {
+    color: $active-color;
+    background: $active-bg;
+    border-color: $active-border;
   }
   &:disabled,
-  .disabled {
+  &.disabled {
     color: $color;
     background: $bg;
     border-color: $border;

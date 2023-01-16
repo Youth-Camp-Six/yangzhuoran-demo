@@ -18,12 +18,14 @@
   box-shadow: $btn-box-shadow;
   cursor: pointer;
   transition: $btn-transition;
+  // 禁用时
   &.disabled,
   &[disabled] {
     cursor: not-allowed;
     opacity: $btn-disabled-opacity;
     box-shadow: none;
     > * {
+      // 阻止字元素鼠标事件
       pointer-events: none;
     }
   }
@@ -66,22 +68,27 @@
 }
 
 .btn-link {
-  font-weight: $font-weight-normal;
-  color: $btn-link-color;
-  text-decoration: $link-decoration;
+  @include button-style($white, $white,  $primary);
   box-shadow: none;
-  &:hover {
-    color: $btn-link-hover-color;
-    text-decoration: $link-hover-decoration;
-  }
-  &:focus,
-  &.focus {
-    text-decoration: $link-hover-decoration;
-    box-shadow: none;
-  }
-  &:disabled,
-  &.disabled {
-    color: $btn-link-disabled-color;
-    pointer-events: none;
-  }
 }
+
+// .btn-link {
+//   font-weight: $font-weight-normal;
+//   color: $btn-link-color;
+//   text-decoration: $link-decoration;
+//   box-shadow: none;
+//   &:hover {
+//     color: $btn-link-hover-color;
+//     text-decoration: $link-hover-decoration;
+//   }
+//   &:focus,
+//   &.focus {
+//     text-decoration: $link-hover-decoration;
+//     box-shadow: none;
+//   }
+//   &:disabled,
+//   &.disabled {
+//     color: $btn-link-disabled-color;
+//     pointer-events: none;
+//   }
+// }
