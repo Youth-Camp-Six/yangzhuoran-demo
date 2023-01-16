@@ -2,17 +2,15 @@
 
 ## 代码风格与代码提交规范
 
-- .editorconfig 统一编辑器代码格式
+- editorconfig 统一编辑器代码格式
 
-- .prettier 配置样式
+- prettier 配置样式
 
 - ESLint 代码格式规范
 
-- husky 确保提交代码时, 代码格式符合 ESLint 规范
-
 - commitizen 确保提交代码时, commit message 规范
 
-- commitlint 拦截不规范的提交
+- husky 拦截commit, 进行eslit检查, 并使用commitize模版进行提交, 
 
 ## 文件目录
 
@@ -34,4 +32,3 @@ src
 
 代码: https://github.com/chenshone/chenshone-ui
 
-## ......(思考中还要写什么)
